@@ -1,0 +1,276 @@
+:root {
+  --black: #0C0D10;
+  --light-black: #222737;
+  --button-color: #2F333C;
+  --white: #FAFAFA;
+  --primary-color: #CDAAFF;
+}
+
+@font-face {
+  font-family: "Bagoss";
+  src: url("./fonts/Bagoss/BagossTRIALVF.ttf");
+  font-weight: 400;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(94.55% 94.55% at 50% 5.45%, var(--light-black) -2%, var(--black) 100%);
+  color: var(--white);
+  font-family: "Bagoss";
+  font-weight: normal;
+  overflow-x: hidden;
+}
+
+.px-4 {
+  padding: 0 1rem;
+}
+
+.py-8 {
+  padding: 2rem 0;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.my-4 {
+  margin: 1rem 0;
+}
+
+.my-8 {
+  margin: 2rem 0;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.max-w-small {
+  max-width: 146px;
+}
+
+.max-w-xs {
+  max-width: 80px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+.lead {
+  font-size: 28px;
+  letter-spacing: 1%;
+  line-height: 120%;
+}
+.lead > span {
+  background: linear-gradient(90deg, #FABBFF 0%, #B179FF 35%, #6DDDFF 83%);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.large {
+  font-size: 22px;
+  letter-spacing: 1%;
+}
+.large > span {
+  opacity: 0.34;
+}
+
+.medium {
+  font-size: 19px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: 1rem;
+  min-height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.floating {
+  position: absolute;
+  font-size: 12px;
+  text-align: left;
+}
+.floating--1 {
+  top: 0;
+  left: 0;
+}
+.floating--2 {
+  right: 0;
+  top: 3rem;
+}
+.floating--3 {
+  left: 0;
+  top: 40%;
+}
+.floating--4 {
+  right: 0;
+  bottom: 6rem;
+}
+.floating--5 {
+  bottom: 1rem;
+  left: 0;
+  max-width: 250px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.btn {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+.btn--full {
+  width: 100%;
+  border-radius: 18px;
+  height: 60px;
+}
+.btn--radial {
+  width: 46px;
+  height: 46px;
+  background-color: var(--button-color);
+  border-radius: 50%;
+}
+.btn--primary {
+  background-color: var(--primary-color);
+  color: var(--black);
+  border: 1px solid var(--primary-color);
+}
+.btn--hollow {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  color: var(--white);
+}
+.btn--secondary {
+  border: 1px solid white;
+  background-color: #FFFFFF;
+  color: var(--black);
+}
+.btn--secondary:focus {
+  outline: rgba(255, 255, 255, 0.1) 8px solid;
+}
+.btn--form {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  position: absolute;
+  right: 1rem;
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.form-group input[type=text],
+.form-group input[type=email] {
+  padding-right: 60px;
+}
+
+input[type=text],
+input[type=email] {
+  background-color: transparent;
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 0 20px;
+  font-size: 16px;
+  border-radius: 18px;
+  width: 100%;
+  color: var(--white);
+}
+
+.input-error {
+  border: 1px solid #ff4d4d !important;
+}
+
+.shake {
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+.slider__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+}
+.slider__slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+  position: relative;
+}
+
+.indicator {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 1rem 0 2rem 0;
+}
+.indicator__bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  transition: background 0.3s, transform 0.3s;
+}
+.indicator__bullet.active {
+  background: var(--primary-color);
+}/*# sourceMappingURL=app.css.map */

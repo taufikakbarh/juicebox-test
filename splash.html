@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juicebox Test - Splash Screen</title>
+    <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+    <div class="container">
+        <!-- top section -->
+        <div class="topbar">
+            <div>
+                <a href="javascript:history.back();" class="btn btn--radial">
+                    <img src="/assets/arrow_left.svg" alt="">
+                </a>
+            </div>
+            <div><img src="/assets/logo.svg"></div>
+            <div>
+                <a href="javascript:;" class="btn btn--radial">
+                    <img src="/assets/refresh.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+        <!-- middle section -->
+        <div class="mb-4">
+            <div class="text-center mb-4 relative">
+                <img src="/assets/Vector.png" alt="" class="max-w-small">
+            </div>
+
+            <div class="slider">
+                <div class="slider__slide active">
+                    <p class="large text-center mb-4">Professionals around the world shared how they feel abo<span>ut technology and I’ve listened. Now it’s your turn.</span></p>
+                </div>
+
+                <div class="slider__slide">
+                    <p class="large text-center mb-4">I’ll ask you a handful of meaningful questions <span>and compare your responses with people in your industry.</span></p>
+                </div>
+                
+                <div class="slider__slide">
+                    <p class="large text-center mb-4">You’ll get insights into current industry sentiments an<span>d a reality check about technology in a few minutes. Deal? Great!</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- bottom section -->
+        <div class="my-4">
+            <div class="indicator" id="bullet"></div>
+            <a href="javascript:;" class="btn btn--full btn--hollow mb-4" id="nextBtn">Continue</a>
+        </div>
+    </div>
+
+    <!-- slider handler -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="/assets/app.js"></script>
+</body>
+</html>

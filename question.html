@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juicebox Test - Splash Screen</title>
+    <link rel="stylesheet" href="assets/app.css">
+    <script
+        src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"
+        type="module"
+    ></script>
+</head>
+<body>
+    <div class="container">
+        <!-- top section -->
+        <div class="mb-8">
+            <div class="topbar">
+                <div>
+                    <a href="javascript:history.back();" class="btn btn--radial">
+                        <img src="/assets/arrow_left.svg" alt="">
+                    </a>
+                </div>
+                <div><img src="/assets/logo.svg"></div>
+                <div>
+                    <a href="javascript:location.reload();;" class="btn btn--radial">
+                        <img src="/assets/refresh.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <dotlottie-wc
+                src="/assets/JB2G_Lottie.json"
+                speed="1"
+                background="transparent"
+                mode="forward"
+                class="my-8 mx-auto max-w-xs"
+                loop
+                autoplay
+            ></dotlottie-wc>
+
+            <p class="medium text-center" id="question">Let’s start with the basics. Type in your first name.</p>
+        </div>
+
+        <!-- bottom section -->
+        <div class="my-4">
+            <div class="form-group" id="formWrap">
+                <input 
+                    type="text" 
+                    id="answerInput" 
+                    placeholder="First name">
+                <button class="btn btn--form" id="nextBtn"><img src="/assets/arrow_up.svg"></button>
+            </div>
+
+            <div id="continueWrap" style="display:none;">
+                <a href="/" class="btn btn--full btn--secondary mb-4">Continue</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- question handler -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="/assets/form.js"></script>
+</body>
+</html>
